@@ -1,0 +1,298 @@
+<!-- Estructura básica del documento HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>División sintética</title>
+<style>
+    /* === Ajustes básicos === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #d8c7ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* === Contenedor principal === */
+.container {
+  background-color: #f5f3ff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  border: 2px solid #bbaaff;
+  animation: aparecer 0.7s ease;
+transition: all 0.5s;
+}
+
+.container:hover{
+    transform: scale(103%);
+}
+
+/* === Títulos === */
+h1 {
+  color: #6a00f4;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: cambiardecolor1 5s ease-in-out infinite;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 0.9em;
+  animation: cambiardecolor 3s ease-in-out infinite;
+}
+
+/* === Sección de entrada === */
+.input-section {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbaaff;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #7b2cbf;
+  background-color: #f0e6ff;
+}
+
+/* === Botón === */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #7b2cbf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #9370db;
+  transform: scale(107%) translateY(-5px); 
+}
+
+/* === Resultados === */
+.result-section {
+  margin-top: 25px;
+  background-color: #f7f3ff;
+  border: 1px solid #bbaaff;
+  border-radius: 5px;
+  padding: 15px;
+  display: none;
+}
+
+.result-section.show {
+  display: block;
+  animation: aparecer 0.6s ease;
+}
+
+.result-title {
+  color: #4a148c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* === Tablas === */
+.process-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.process-table td {
+  border: 1px solid #bbaaff;
+  padding: 8px;
+  text-align: center;
+}
+
+.process-table tr:first-child td {
+  background-color: #7b2cbf;
+  color: white;
+  font-weight: bold;
+}
+
+.divisor-cell {
+  background-color: #e6d6ff;
+}
+
+/* === Resultado final === */
+.final-result {
+  background-color: #ede7f6;
+  border: 1px solid #bbaaff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.final-result p {
+  margin: 5px 0;
+}
+
+/* === Mensaje de error === */
+.error {
+  background-color: #ffe6e6;
+  border: 1px solid #ffb3b3;
+  color: #b30000;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* === Ejemplo === */
+.example {
+  background-color: #f3f0ff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.85em;
+  margin-top: 8px;
+}
+
+.footer {
+    background:radial-gradient(ellipse, #bcb09c, #8b47c6);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    transition: all 0.6s;
+}
+
+.footer:hover {
+  background-color: #8da993;
+  transform: scale(103%);
+  background:radial-gradient(ellipse, #9cb9bc, #c64795);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+
+.footer-links a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* === Animaciones === */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cambiardecolor {
+    0%   { color: rgb(221, 75, 219); }
+    50%  { color: rgb(238, 0, 255); }
+    100% { color: rgb(235, 86, 246); }
+}
+@keyframes cambiardecolor1 {
+    20%   { color: rgb(129, 97, 236); }
+    50%  { color: rgb(113, 215, 215); }
+    100% { color: rgb(224, 142, 247); }
+}
+</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <h1>División Sintética de Polinomios</h1>
+    <p class="subtitle">Soporta coeficientes y raíces reales y complejas</p>
+
+    <div class="input-section">
+        <label for="polinomio">Polinomio:</label>
+        <input type="text" id="polinomio" placeholder="Ejemplo: 5x^3 + 3x^2 + 2x + 1 o x^2 - 6x + 11">
+        <p class="help-text">Ingresa el polinomio con formato algebraico</p>
+        <div class="example">
+            <strong>Ejemplos:</strong><br>
+            • 5x^3 + 3x^2 + 2x + 1<br>
+            • x^3 - 6x^2 + 11x - 6<br>
+            • 2x^2 + (3+2i)x + 1<br>
+            • x^4 - 1
+        </div>
+    </div>
+
+    <div class="input-section">
+        <label for="raiz">Raíz (divisor):</label>
+        <input type="text" id="raiz" placeholder="Ejemplo: 2 o 1+i">
+        <p class="help-text">Ingresa el valor de la raíz (puede ser complejo)</p>
+        <div class="example">
+            <strong>Ejemplos:</strong> 2, -3, 1+i, 2-3i
+        </div>
+    </div>
+
+    <button onclick="calcularDivision()">Calcular División Sintética</button>
+
+    <div id="resultado" class="result-section"></div>
+    <br>
+    <br>
+    <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>
+                        &copy; 2025 <strong>Alumno Ariff Iazid Medina Gómez 1C</strong> • 
+                        <strong>Docente M. en C. Jorge J. Pedrozo Romero</strong> • <strong>Tecnológico de Software</strong>
+                    </p>
+                    <p>
+                        <strong>Fundamentos de Álgebra</strong> • 1° Cuatrimestre 2025
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" aria-label="Enviar correo al profesor">
+                        Contacto
+                    </a>
+                    <a href="#" aria-label="Ver portfolio del profesor">
+                        Portfolio
+                    </a>
+                </div>
+            </div>
+        </footer>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
