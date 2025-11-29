@@ -1,0 +1,290 @@
+<!-- Estructura básica del documento HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Operaciones Algebraicas</title>
+<style>
+    /* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: #1a1a1a; /* Negro */
+    color: #ffffff; /* Blanco */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    color: #ff0000; /* Azul */
+    margin-bottom: 3rem;
+}
+
+/* Sección de inputs */
+
+ @keyframes cambiardecolor {
+    0%   { color: white; }
+    50%  { color: red; }
+    100% { color: white; }
+}
+
+.subtitulo {
+    color: white;
+    animation: cambiardecolor 3s ease-in-out infinite;
+}
+
+.input-section {
+    margin-bottom: 2rem;
+}
+
+.field-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff; /* Blanco */
+    margin-bottom: 0.5rem;
+}
+
+/* Campos de texto */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    background-color: #2d2d2d;
+    border: 2px solid #410b0bfe; /* Azul */
+    border-radius: 8px;
+    color: #ffffff; /* Blanco */
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #db0000; /* Amarillo */
+}
+
+textarea::placeholder {
+    color: #888888;
+}
+
+/* Botón de calcular */
+.calculate-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #920909; /* Azul */
+    color: #ffffff; /* Blanco */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.calculate-button:hover {
+    background-color: #ca0000;
+    transform: translateY(-2px);
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 50px rgba(230, 57, 70, 0.6);
+}
+
+.calculate-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);}
+
+@keyframes brillo {
+    0% {
+      left: -75%;
+    }
+    100% {
+      left: 125%;
+    }
+  }
+
+.calculate-button:hover:after {
+    animation: shine 0.8s ease forwards;
+  }
+
+.calculate-button:active {
+    transform: translateY(0);
+}
+
+/* Sección de resultados */
+.result-section {
+    margin-top: 2rem;
+}
+
+.info-card {
+    background-color: #2d2d2d;
+    border: 2px solid #bd0000; /* Amarillo */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.info-card h3 {
+    color: #bf0000; /* Amarillo */
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.result-content {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff; /* Blanco */
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #964242; /* Amarillo */
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    textarea {
+        min-height: 80px;
+        font-size: 0.9rem;
+    }
+}
+
+.footer {
+    background:radial-gradient(ellipse, #000000, #360e0e);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+
+.footer-links a:hover {
+    background-color: white;
+    color: black;
+}
+
+</style>
+</head>
+<body>
+    <!-- Estructura básica del documento HTML -->
+<div class="container">
+        <h1>Calculadora de Variables</h1>
+
+        <div class="input-section">
+            <div class="field-group">
+                <label for="variables" class="subtitulo">Variables:</label>
+                <textarea id="variables" placeholder="Ejemplo: feature_cost, w1 = 1, w2 = 2, w3 = 3"></textarea>
+            </div>
+
+            <div class="field-group">
+                <label for="equations" class="subtitulo">Ecuaciones:</label>
+                <textarea id="equations" placeholder="Ejemplo: feature_cost = w1 * w2 + w3"></textarea>
+            </div>
+
+            <button id="calculate-btn" class="calculate-button">Calcular</button>
+        </div>
+
+        <div class="result-section">
+            <div class="info-card">
+                <h3>Resultado:</h3>
+                <div id="result" class="result-content">
+                    Ingresa las variables y ecuaciones para ver el resultado
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>
+                        &copy; 2025 <strong>Alumno Ariff Iazid Medina Gómez 1C</strong> • 
+                        <strong>Docente M. en C. Jorge J. Pedrozo Romero</strong> • <strong>Tecnológico de Software</strong>
+                    </p>
+                    <p>
+                        <strong>Fundamentos de Álgebra</strong> • 1° Cuatrimestre 2025
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" aria-label="Enviar correo al profesor">
+                        Contacto
+                    </a>
+                    <a href="#" aria-label="Ver portfolio del profesor">
+                        Portfolio
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script src="script.js"></script>
+<br>
+
+</body>
+</html>
