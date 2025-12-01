@@ -1,0 +1,42 @@
+body {
+            background-color: #0a0a0a;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #151515;
+            padding: 30px;
+            border: 2px solid #4a00e0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8e2de2;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: block;
+            background-color: #2a0080;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border: 1px solid #8e2de2;
+        }
+
+        a:hover {
+            background-color: #4a00e0;
+        }
