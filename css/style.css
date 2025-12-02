@@ -511,3 +511,611 @@ main {
     padding: 40px;
     font-style: italic;
 }
+/* Actividad 2 */
+
+
+/* ==================== CONTROLES Y FORMULARIOS ==================== */ 
+.controls { 
+    border: 1px solid rgba(157, 80, 255, 0.2); 
+    padding: 20px; 
+    margin-bottom: 20px;
+    background-color: #24123b; 
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(74, 0, 224, 0.2);
+} 
+ 
+.input-group { 
+    margin-bottom: 20px; 
+} 
+ 
+.input-group label { 
+    display: block; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    color: #e0d4f7; 
+} 
+ 
+.input-group input { 
+    width: 300px; 
+    padding: 10px; 
+    border: 2px solid #4a00e0; 
+    font-size: 14px; 
+    margin-bottom: 10px; 
+    background-color: #150a25;
+    color: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+} 
+ 
+.input-group input:focus { 
+    outline: none; 
+    border-color: #9d50ff;
+    box-shadow: 0 0 10px rgba(157, 80, 255, 0.3); 
+}
+
+/* ==================== BOTONES ==================== */ 
+button { 
+    padding: 10px 20px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    border: none; 
+    background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%); 
+    color: white; 
+    cursor: pointer; 
+    margin-right: 10px; 
+    margin-bottom: 5px; 
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(74, 0, 224, 0.3);
+} 
+ 
+button:hover { 
+    background: linear-gradient(90deg, #5b0fff 0%, #a446f0 100%); 
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(130, 45, 226, 0.6);
+} 
+
+/* ==================== NÚMEROS PREDEFINIDOS ==================== */ 
+.preset-section { 
+    margin-top: 20px; 
+} 
+ 
+.preset-section h3 { 
+    font-size: 16px; 
+    margin-bottom: 10px; 
+    color: #9d50ff; 
+} 
+ 
+.preset-section p { 
+    margin-bottom: 15px; 
+    color: #b39ddb; 
+    font-size: 14px; 
+    text-align: left; 
+} 
+ 
+.preset-numbers { 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px; 
+    margin-top: 15px;
+    color: #ff0055; 
+} 
+
+.preset-btn { 
+    padding: 6px 12px; 
+    border: 1px solid #4a00e0; 
+    background-color: #150a25; 
+    color: #e0d4f7;
+    cursor: pointer; 
+    font-size: 12px; 
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+} 
+
+.preset-btn:hover { 
+    background-color: #4a00e0; 
+    color: white; 
+    border-color: #9d50ff;
+    box-shadow: 0 0 10px rgba(157, 80, 255, 0.4);
+}
+
+/* ==================== RECTA NUMÉRICA ==================== */ 
+.number-line-container { 
+    background-color: #24123b;
+    border: 1px solid rgba(157, 80, 255, 0.2); 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+} 
+ 
+.number-line-container h2 { 
+    font-size: 18px; 
+    margin-bottom: 15px; 
+    text-align: center; 
+    color: #9d50ff; 
+} 
+ 
+.number-line { 
+    width: 100%; 
+    height: 100px; 
+    position: relative; 
+    background-color: #150a25; /* Fondo oscuro interno */
+    border: 1px solid #4a00e0; 
+    border-radius: 8px;
+    margin: 20px 0; 
+} 
+ 
+.range-info { 
+    text-align: center; 
+    margin-top: 10px; 
+} 
+ 
+.range-info small { 
+    color: #b39ddb; 
+    font-size: 12px; 
+} 
+
+/* ==================== ELEMENTOS DE LA RECTA ==================== */ 
+.line { 
+    position: absolute; 
+    top: 48px; 
+    left: 5%; 
+    right: 5%; 
+    height: 2px; 
+    background-color: #e0d4f7; /* Línea clara */
+    box-shadow: 0 0 5px rgba(224, 212, 247, 0.5);
+} 
+ 
+.tick { 
+    position: absolute; 
+    width: 2px; 
+    height: 14px; 
+    background-color: #9d50ff; 
+    top: 42px; 
+} 
+ 
+.tick-label { 
+    position: absolute; 
+    top: 65px; 
+    font-size: 12px; 
+    font-weight: bold; 
+    color: #b39ddb; 
+    transform: translateX(-50%); 
+}
+
+/* ==================== PUNTOS EN LA RECTA ==================== */ 
+.number-point { 
+    position: absolute; 
+    width: 14px; 
+    height: 14px; 
+    top: 42px; 
+    transform: translateX(-50%); 
+    border: 2px solid white; 
+    border-radius: 50%; /* Puntos redondos */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+} 
+ 
+/* Colores Neón para los conjuntos */
+.number-point.naturals { 
+    background-color: #ff0055; /* Rosa Neón */
+    box-shadow: 0 0 10px #ff0055;
+} 
+ 
+.number-point.integers { 
+    background-color: #00f3ff; /* Cyan Neón */
+    box-shadow: 0 0 10px #00f3ff;
+} 
+ 
+.number-point.rationals { 
+    background-color: #00ff9d; /* Verde Neón */
+    box-shadow: 0 0 10px #00ff9d;
+} 
+ 
+.number-point.irrationals { 
+    background-color: #ffdd00; /* Amarillo Neón */
+    box-shadow: 0 0 10px #ffdd00;
+} 
+ 
+.point-label { 
+    position: absolute; 
+    top: -30px; 
+    transform: translateX(-50%); 
+    background-color: #4a00e0; 
+    color: white;
+    border: 1px solid #9d50ff; 
+    padding: 2px 6px; 
+    font-size: 10px; 
+    font-weight: bold; 
+    white-space: nowrap; 
+    border-radius: 4px;
+} 
+
+/* =================== PANELES DE INFORMACIÓN =================== */ 
+.info-panels { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+} 
+ 
+.classification-panel, .points-panel, .distance-calculator { 
+    border: 1px solid rgba(157, 80, 255, 0.2); 
+    padding: 20px; 
+    background-color: #24123b;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+} 
+ 
+.classification-panel h3, .points-panel h3, .distance-calculator h3 { 
+    font-size: 16px; 
+    margin-bottom: 15px; 
+    color: #9d50ff; 
+    border-bottom: 1px solid rgba(157, 80, 255, 0.3); 
+    padding-bottom: 5px; 
+}
+
+/* ================== LEYENDA DE CLASIFICACIÓN ================== */ 
+.classification-legend { 
+    margin-bottom: 20px; 
+} 
+ 
+.legend-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 10px 0; 
+    padding: 5px; 
+} 
+ 
+.legend-color { 
+    width: 16px; 
+    height: 16px; 
+    border: 1px solid white; 
+    border-radius: 50%;
+} 
+ 
+.legend-color.naturals { background-color: #ff0055; box-shadow: 0 0 5px #ff0055; } 
+.legend-color.integers { background-color: #00f3ff; box-shadow: 0 0 5px #00f3ff; } 
+.legend-color.rationals { background-color: #00ff9d; box-shadow: 0 0 5px #00ff9d; } 
+.legend-color.irrationals { background-color: #ffdd00; box-shadow: 0 0 5px #ffdd00; } 
+ 
+.classification-info h4 { 
+    font-size: 14px; 
+    margin: 15px 0 10px 0;
+     color: #e0d4f7; 
+} 
+ 
+.classification-info ul { 
+    margin-left: 20px; 
+    color: #b39ddb;
+} 
+ 
+.classification-info li { 
+    margin: 5px 0; 
+    font-size: 12px; 
+} 
+ 
+/* ==================== LISTA DE PUNTOS ==================== */ 
+.points-list { 
+    min-height: 200px; 
+} 
+
+#textpointlist {
+    color: #e0d4f7;
+}
+
+.empty-state p { 
+    font-size: 14px; 
+    color: #b39ddb; 
+    text-align: center; 
+    margin: 20px 0; 
+} 
+ 
+.empty-state small { 
+    display: block; 
+    text-align: center; 
+    font-size: 12px; 
+    color: #6a4c9c; 
+} 
+ 
+.point-item { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    margin: 5px 0; 
+    border: 1px solid #4a00e0; 
+    background-color: #150a25;
+    border-radius: 6px;
+    color: #e0d4f7;
+} 
+
+/* ================== CALCULADORA DE DISTANCIAS ================== */ 
+.calculator-description { 
+    margin-bottom: 15px; 
+    font-size: 13px; 
+    color: #b39ddb; 
+    text-align: left; 
+} 
+ 
+.distance-inputs { 
+    margin-bottom: 20px; 
+} 
+ 
+.distance-field { 
+    margin-bottom: 15px; 
+} 
+ 
+.distance-field label { 
+    display: block; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    color: #e0d4f7; 
+} 
+ 
+.custom-select { 
+    position: relative; 
+    width: 100%; 
+} 
+ 
+.select-selected { 
+    padding: 10px 30px 10px 10px; 
+    border: 1px solid #4a00e0; 
+     background-color: #150a25; 
+    cursor: pointer; 
+    font-size: 14px; 
+    color: white;
+    border-radius: 6px;
+} 
+ 
+.select-selected:after { 
+    content: "▼"; 
+    position: absolute; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 10px; 
+    color: #9d50ff;
+} 
+
+.select-items { 
+    position: absolute; 
+    top: 105%; 
+    left: 0; 
+    right: 0; 
+    background-color: #1e1035; 
+    border: 1px solid #4a00e0; 
+    z-index: 1000; 
+    max-height: 150px; 
+    overflow-y: auto; 
+    display: none; 
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+} 
+ 
+.select-items.show { 
+    display: block; 
+} 
+ 
+.select-items div { 
+    padding: 10px; 
+    cursor: pointer; 
+    border-bottom: 1px solid rgba(157, 80, 255, 0.1); 
+    font-size: 13px; 
+} 
+.select-items div:hover { 
+    background-color: #4a00e0; 
+    color: white; 
+} 
+ 
+.distance-btn { 
+    width: 100%; 
+    padding: 12px; 
+    background: linear-gradient(90deg, #4a00e0 0%, #8e2de2 100%); 
+    color: white; 
+    border: none; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-bottom: 15px; 
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(74, 0, 224, 0.3);
+} 
+
+.distance-btn:hover {
+     background: linear-gradient(90deg, #5b0fff 0%, #a446f0 100%);
+}
+ 
+.distance-placeholder { 
+    text-align: center; 
+    padding: 20px; 
+    border: 1px dashed #4a00e0;
+    border-radius: 12px; 
+    color: #6a4c9c;
+} 
+ 
+.distance-result { 
+    padding: 15px; 
+    border: 1px solid #00f3ff; 
+    background-color: #150a25; 
+    font-size: 14px; 
+    text-align: center; 
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+.instructions { 
+    background-color: #24123b; 
+    padding: 15px; 
+    border-radius: 6px; 
+    margin-bottom: 25px; 
+    font-size: 14px; 
+    color: #e0d4f7;
+    border: 1px solid rgba(157, 80, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+} 
+ 
+.instructions ul { 
+    margin-left: 20px; 
+    margin-top: 10px;
+} 
+ 
+.instructions li { 
+    margin-bottom: 5px; 
+} 
+ 
+.form-section { 
+    margin-bottom: 25px; 
+    border: 1px solid rgba(157, 80, 255, 0.2); 
+    border-radius: 6px; 
+    padding: 20px; 
+    background: #1e1035; 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+} 
+
+.form-section:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(157, 80, 255, 0.15);
+    border-color: #4a00e0;
+}
+ 
+.input-group { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 15px;
+} 
+ 
+.input-group:last-child { 
+    margin-bottom: 0; 
+} 
+ 
+label { 
+    min-width: 20px; 
+    font-weight: 500; 
+    color: #9d50ff; 
+    font-size: 16px; 
+    text-shadow: 0 0 5px rgba(157, 80, 255, 0.3);
+} 
+ 
+.operator { 
+    font-size: 16px; 
+    color: #00f3ff; 
+    margin: 0 5px; 
+    font-weight: bold; 
+}
+
+input[type="text"] { 
+    width: 100px; 
+    padding: 8px 12px; 
+    border: 1px solid #4a00e0; 
+    background-color: #150a25;
+    color: white;
+    border-radius: 4px; 
+    font-size: 14px; 
+    text-align: center; 
+    font-family: 'Courier New', monospace; 
+    transition: all 0.3s ease;
+} 
+ 
+input[type="text"]:focus { 
+    outline: none; 
+    border-color: #9d50ff; 
+    box-shadow: 0 0 10px rgba(157, 80, 255, 0.4); 
+} 
+ 
+input[readonly] { 
+    background-color: #0d061a !important; 
+    color: #6a4c9c;
+    border-color: #333;
+    cursor: not-allowed; 
+} 
+ 
+.result { 
+    background-color: #0d061a; 
+    padding: 15px; 
+    border-radius: 4px; 
+    border-left: 4px solid #00ff9d; 
+    font-family: 'Courier New', monospace; 
+    font-size: 16px; 
+    color: #00ff9d; 
+    min-height: 50px; 
+    display: flex; 
+    align-items: center;
+    font-weight: bold; 
+    box-shadow: inset 0 0 20px rgba(0, 255, 157, 0.1);
+} 
+ 
+.clear-btn { 
+    background-color: transparent; 
+    color: #ff0055; 
+    border: 1px solid #ff0055; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    margin-top: 20px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-weight: 500; 
+    transition: all 0.3s ease;
+} 
+ 
+.clear-btn:hover { 
+    background-color: #ff0055; 
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+    transform: translateY(-2px); 
+}
+
+.footer {
+    background: #150a25;
+    color: #b39ddb;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 1px solid #4a00e0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #e0d4f7;
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid #4a00e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    background-color: #9d50ff;
+    color: white;
+    border-color: #9d50ff;
+    box-shadow: 0 0 10px rgba(157, 80, 255, 0.3);
+}
