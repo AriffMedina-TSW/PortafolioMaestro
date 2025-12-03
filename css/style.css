@@ -1720,3 +1720,62 @@ footer p {
   animation: brillo 2.5s infinite ease-in-out;
   color: #e0d4f7;
 }
+
+.perfil {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: #00f3ff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background-color: #150a25;
+    padding: 20px;
+    border: 1px solid #4a00e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 20px rgba(74, 0, 224, 0.2);
+}
+
+.info {
+    text-align: left;
+    color: #e0d4f7;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(157, 80, 255, 0.2);
+}
+
+.info strong {
+    color: #9d50ff;
+    margin-right: 5px;
+}
+
+.info-ancho {
+    grid-column: span 2;
+    text-align: center;
+    border-bottom: none;
+    color: #b39ddb;
+}
+
+.texto {
+    color: #b39ddb;
+    font-style: italic;
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #9d50ff, transparent);
+    margin: 30px 0;
+}
