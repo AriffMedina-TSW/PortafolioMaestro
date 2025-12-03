@@ -161,36 +161,6 @@ textarea::placeholder {
     transform: translateY(0);
 }
 
-.info-card {
-    background-color: #24123b; 
-    border: 1px solid rgba(157, 80, 255, 0.2); 
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 32px 0 rgba(106, 13, 173, 0.25);
-}
-
-.info-card h3 {
-    color: #9d50ff;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.result-content {
-    font-family: 'Courier New', monospace;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #e0d4f7;
-    background-color: #120822;
-    padding: 1rem;
-    border-radius: 6px;
-    border-left: 4px solid #8e2de2; 
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    border: 1px solid rgba(142, 45, 226, 0.1);
-}
 .titulo.one.piece {
     color: #9d50ff;
     text-shadow: 0 0 10px rgba(157, 80, 255, 0.4);
@@ -1542,9 +1512,9 @@ footer p {
   border: 1px solid #9d50ff;
   border-radius: 8px;
   padding: 15px;
-  display: none;
   box-shadow: 0 0 20px rgba(157, 80, 255, 0.2);
 }
+
 
 .result-section.show {
   display: block;

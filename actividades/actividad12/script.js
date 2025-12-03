@@ -186,7 +186,9 @@ function divisionSintetica(coeficientes, raiz) {
 // Función para mostrar el resultado en HTML
 function mostrarResultado(resultado, coeficientes, raiz, polinomioOriginal) {
     let html = '<div class="result-title">Polinomio Original</div>';
-    html += '<div style="text-align: center; font-size: 1.2em; margin-bottom: 20px; padding: 15px; background: white; border: 1px solid #e0e0e0; border-radius: 4px;">';
+    
+    // CORRECCIÓN AQUÍ: Cambiado el estilo inline para que coincida con el tema Dark Neon
+    html += '<div style="text-align: center; font-size: 1.2em; margin-bottom: 20px; padding: 15px; background: #150a25; border: 1px solid #4a00e0; border-radius: 4px; color: #e0d4f7; box-shadow: inset 0 0 10px rgba(0,0,0,0.5);">';
     html += '<strong>' + polinomioOriginal + '</strong>';
     html += '</div>';
 
@@ -197,7 +199,7 @@ function mostrarResultado(resultado, coeficientes, raiz, polinomioOriginal) {
         const exp = coeficientes.length - 1 - i;
         html += '<td><strong>';
         if (exp === 0) {
-            html += 'Término independiente';
+            html += 'Término indep.';
         } else if (exp === 1) {
             html += 'x';
         } else {
@@ -267,7 +269,7 @@ function mostrarResultado(resultado, coeficientes, raiz, polinomioOriginal) {
     html += '<p><strong>Residuo:</strong> ' + resultado.residuo.toString() + '</p>';
     
     if (resultado.residuo.esReal() && Math.abs(resultado.residuo.real) < 1e-10) {
-        html += '<p style="color: #333; font-weight: 600;">✓ La división es exacta (residuo = 0)</p>';
+        html += '<p style="color: #00ff9d; font-weight: 600;">✓ La división es exacta (residuo = 0)</p>';
     }
     
     html += '</div>';
