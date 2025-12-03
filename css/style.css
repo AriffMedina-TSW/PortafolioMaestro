@@ -1650,3 +1650,73 @@ footer p {
     50%  { color: rgb(113, 215, 215); }
     100% { color: rgb(224, 142, 247); }
 }
+
+.result-box table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    background-color: #150a25;
+    color: #e0d4f7;
+    border: 1px solid #4a00e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.result-box table th,
+.result-box table td {
+    border: 1px solid rgba(157, 80, 255, 0.2);
+    padding: 10px;
+    text-align: left;
+}
+
+.result-box table th {
+    background-color: #24123b;
+    color: #9d50ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result-box tbody tr:nth-child(even) {
+    background-color: rgba(74, 0, 224, 0.05);
+}
+
+.result-box tbody tr:hover {
+    background-color: rgba(157, 80, 255, 0.1);
+}
+
+.formula-original {
+    background-color: #0d061a;
+    padding: 12px;
+    border-left: 4px solid #00f3ff;
+    color: #00f3ff;
+    font-family: 'Courier New', monospace;
+    border-radius: 0 4px 4px 0;
+    box-shadow: inset 0 0 15px rgba(0, 243, 255, 0.1);
+}
+
+.nota-didactica {
+    background-color: rgba(255, 221, 0, 0.05);
+    border-left: 4px solid #ffdd00;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 0 4px 4px 0;
+    color: #e0d4f7;
+}
+
+@keyframes brillo {
+  0% {
+    text-shadow: 0 0 2px #9d50ff;
+  }
+  50% {
+    text-shadow: 0 0 12px #9d50ff, 0 0 20px rgba(157, 80, 255, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 2px #9d50ff;
+  }
+}
+
+.matrix-footer h2 {
+  animation: brillo 2.5s infinite ease-in-out;
+  color: #e0d4f7;
+}
